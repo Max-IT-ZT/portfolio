@@ -1,0 +1,55 @@
+import css from "./Header.module.css";
+import logo from "../../Img/Logo/Logo-2.png";
+import { FaGlobe } from "react-icons/fa";
+
+export default function Header({ language, setLanguage }) {
+  const toggleLanguage = () => {
+    setLanguage((prev) => (prev === "ua" ? "en" : "ua"));
+  };
+
+  const texts = {
+    ua: {
+      about: "Про мене",
+      projects: "Проєкти",
+      contacts: "Контакти",
+      flag: "🇺🇦",
+      language: "UA",
+    },
+    en: {
+      about: "About Me",
+      projects: "Projects",
+      contacts: "Contacts",
+      flag: "🇬🇧",
+      language: "EN",
+    },
+  };
+
+  return (
+    <div className={css.mainContainer}>
+      <a className={css.logoLink} href="#">
+        <img className={css.logoImg} src={logo} alt="Logo" />
+      </a>
+
+      <nav className={css.navWrapper}>
+        <ul className={css.menu}>
+          <li className={css.menuItem}>
+            <a href="#about">{texts[language].about}</a>
+          </li>
+          <li className={css.menuItem}>
+            <a href="#projects">{texts[language].projects}</a>
+          </li>
+          <li className={css.menuItem}>
+            <a href="#contacts">{texts[language].contacts}</a>
+          </li>
+        </ul>
+
+        <div className={css.langSwitcher}>
+          <button onClick={toggleLanguage} className={css.langButton}>
+            <span>{texts[language].flag}</span>
+            <span>{texts[language].language}</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  );
+}
