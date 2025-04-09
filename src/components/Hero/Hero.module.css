@@ -9,8 +9,9 @@
   color: #fff;
   box-sizing: border-box;
   background-image: url("../../Img/Background/bc-3.png");
-  background-size: cover;
 
+  background-size: contain;
+  background-position: right;
   background-repeat: no-repeat;
 }
 .typewriter {
@@ -81,6 +82,8 @@
 @media (max-width: 768px) {
   .container {
     padding: 1rem;
+    background-size: cover;
+    background-position: left;
   }
   .typewriter {
     font-size: 28px;
