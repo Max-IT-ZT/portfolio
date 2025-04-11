@@ -24,9 +24,9 @@ export default function Hero({ language }) {
       setDisplayed(code.slice(0, i) + `<span class="${css.cursor}">|</span>`);
       i++;
       if (i > code.length) clearInterval(interval);
-    }, 10);
+    }, 20);
     return () => clearInterval(interval);
-  }, []);
+  }, [code]);
   return (
     <div className={css.container}>
       <h1 className={css.heroTitle}>
@@ -36,12 +36,21 @@ export default function Hero({ language }) {
               language === "ua"
                 ? "Привіт! Я Максим, Full-Stack Розробник :)"
                 : "Hi! I'm Maksym, Full-Stack Developer :)",
+              language === "ua"
+                ? "Тут я розповім про себе."
+                : "Here, I'll share about myself.",
+              language === "ua"
+                ? "Свої скіли та проєкти, які вже встиг зробити."
+                : "My skills and the projects I have completed so far.",
+              language === "ua"
+                ? "Гортай далі, щоб побачити мої роботи!"
+                : "Scroll down to see my work!",
             ],
             autoStart: true,
             loop: true,
             delay: 75,
             deleteSpeed: 50,
-            pauseFor: 20000,
+            pauseFor: 1000,
             wrapperClassName: css.typewriter,
             cursorClassName: `${css.cursor} ${css.cursorAnimation}`,
             cursor: "|",

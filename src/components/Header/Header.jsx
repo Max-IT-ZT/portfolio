@@ -1,5 +1,5 @@
 import css from "./Header.module.css";
-import logo from "../../Img/Logo/Logo-2.png";
+import logo from "../../Img/Logo/Logo4.png";
 import { FaGlobe } from "react-icons/fa";
 
 export default function Header({ language, setLanguage }) {
@@ -45,7 +45,7 @@ export default function Header({ language, setLanguage }) {
 
         <div className={css.langSwitcher}>
           <button onClick={toggleLanguage} className={css.langButton}>
-            <span>{texts[language].flag}</span>
+            {/* <span>{texts[language].flag}</span> */}
             <span>{texts[language].language}</span>
           </button>
         </div>
