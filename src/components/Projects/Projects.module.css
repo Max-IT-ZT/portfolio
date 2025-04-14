@@ -1,0 +1,130 @@
+.projectsContainer {
+  padding: 60px 20px;
+
+  border-radius: 20px;
+}
+
+.projectsTitle {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 50px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.projectsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.projectImgSubtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.movieImg {
+  width: 50%;
+  max-width: 500px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.projectTitle {
+  font-size: 28px;
+  margin: 20px 0 10px;
+  color: #ffffff;
+}
+
+.projectDescription {
+  color: #e0e0e0;
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.descriptionVideoWrapper {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.videoPreview {
+  width: 100%;
+  max-width: 640px;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.buttonWrapper {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.linkBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #000;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
+  text-decoration: none;
+}
+
+.linkBtn:hover {
+  background-color: #111;
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.6);
+}
+
+/* Responsive layout */
+@media (min-width: 768px) {
+  .projectCard {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .projectImgSubtitle,
+  .descriptionVideoWrapper {
+    width: 48%;
+  }
+
+  .projectTitle {
+    font-size: 30px;
+  }
+
+  .projectDescription {
+    font-size: 18px;
+  }
+}

@@ -1,14 +1,16 @@
 import css from "./Main.module.css";
-// import imgMe from "../../Img/About/about-me3.jpg";
-import { RiJavascriptFill } from "react-icons/ri";
-import { RiReactjsLine } from "react-icons/ri";
+import {
+  RiJavascriptFill,
+  RiReactjsLine,
+  RiNodejsLine,
+  RiHtml5Fill,
+} from "react-icons/ri";
 import { TbBrandRedux } from "react-icons/tb";
-import { BiLogoTypescript } from "react-icons/bi";
-import { RiNodejsLine } from "react-icons/ri";
+import { BiLogoTypescript, BiLogoMongodb } from "react-icons/bi";
 import { SiCss3 } from "react-icons/si";
-import { RiHtml5Fill } from "react-icons/ri";
-import { BiLogoMongodb } from "react-icons/bi";
 import { FaSquareGithub } from "react-icons/fa6";
+import Marquee from "react-fast-marquee";
+
 export default function Main({ language }) {
   return (
     <section id="about" className={css.mainContainer}>
@@ -34,7 +36,6 @@ export default function Main({ language }) {
               свої навички.
             </p>
           )}
-          {/* <img className={css.imgMe} src={imgMe} alt="Photo" /> */}
         </div>
 
         <div className={css.textSkillsWrapper}>
@@ -58,41 +59,44 @@ export default function Main({ language }) {
           )}
         </div>
       </div>
+
       {language === "en" ? (
         <h2 className={css.mainTitle}>Skills</h2>
       ) : (
         <h2 className={css.mainTitle}>Навички</h2>
       )}
 
-      <ul className={css.skillsList}>
-        <li className={css.skillItem}>
-          JavaScript <RiJavascriptFill />
-        </li>
-        <li className={css.skillItem}>
-          React <RiReactjsLine />
-        </li>
-        <li className={css.skillItem}>
-          Redux <TbBrandRedux />
-        </li>
-        <li className={css.skillItem}>
-          TypeScript <BiLogoTypescript />
-        </li>
-        <li className={css.skillItem}>
-          Node.js <RiNodejsLine />
-        </li>
-        <li className={css.skillItem}>
-          CSS <SiCss3 />
-        </li>
-        <li className={css.skillItem}>
-          HTML <RiHtml5Fill />
-        </li>
-        <li className={css.skillItem}>
-          MongoDB <BiLogoMongodb />
-        </li>
-        <li className={css.skillItem}>
-          Git <FaSquareGithub />
-        </li>
-      </ul>
+      <Marquee pauseOnHover speed={50} gradient={false}>
+        <ul className={css.skillsList}>
+          <li className={`${css.skillItem} ${css.js}`}>
+            <RiJavascriptFill className={css.icon} /> JavaScript
+          </li>
+          <li className={`${css.skillItem} ${css.react}`}>
+            <RiReactjsLine className={css.icon} /> React
+          </li>
+          <li className={`${css.skillItem} ${css.redux}`}>
+            <TbBrandRedux className={css.icon} /> Redux
+          </li>
+          <li className={`${css.skillItem} ${css.ts}`}>
+            <BiLogoTypescript className={css.icon} /> TypeScript
+          </li>
+          <li className={`${css.skillItem} ${css.node}`}>
+            <RiNodejsLine className={css.icon} /> Node.js
+          </li>
+          <li className={`${css.skillItem} ${css.css}`}>
+            <SiCss3 className={css.icon} /> CSS
+          </li>
+          <li className={`${css.skillItem} ${css.html}`}>
+            <RiHtml5Fill className={css.icon} /> HTML
+          </li>
+          <li className={`${css.skillItem} ${css.mongo}`}>
+            <BiLogoMongodb className={css.icon} /> MongoDB
+          </li>
+          <li className={`${css.skillItem} ${css.git}`}>
+            <FaSquareGithub className={css.icon} /> Git
+          </li>
+        </ul>
+      </Marquee>
     </section>
   );
 }

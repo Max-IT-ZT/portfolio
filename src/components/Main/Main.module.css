@@ -1,63 +1,119 @@
 .mainContainer {
+  padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: start;
-  padding: 0 20px;
-  color: white;
+  align-items: center;
+  color: #ffffff;
+  background: transparent;
 }
+
 .mainTitle {
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 3px;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
+
 .mainText {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 5px;
-}
-.textAboutWrapper {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
-  margin: 40px 20px;
-}
-.textAbout {
-  font-size: 20px;
-  font-weight: 500;
-  color: #ffffff;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 800px;
+  margin-bottom: 3rem;
   text-align: center;
-  width: 540px;
-  padding: 40px;
-  background-color: rgba(0, 0, 0, 0.427);
-  border-radius: 30px;
 }
-/* .imgMe {
-  width: 250px;
-  height: 250px;
-  border-radius: 20%;
-  background-color: white;
-  margin: 0 auto;
-  display: block;
-} */
-.textSkills {
-  font-size: 20px;
-  font-weight: 500;
-  color: #ffffff;
-  text-align: center;
-  width: 540px;
-  padding: 40px;
 
-  background-color: rgba(0, 0, 0, 0.427);
-  border-radius: 30px;
-}
+.textAboutWrapper,
 .textSkillsWrapper {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
 
-  margin-left: auto;
+.textAbout,
+.textSkills {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.skillsList {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+  padding: 0 0.7rem;
+  margin: 2rem 0;
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 1rem;
+  min-width: 120px;
+  height: 120px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  color: #fff;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.skillItem:hover {
+  transform: scale(1.05);
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Індивідуальні кольори іконок */
+.js .icon {
+  color: #f0db4f;
+}
+.react .icon {
+  color: #61dbfb;
+}
+.redux .icon {
+  color: #764abc;
+}
+.ts .icon {
+  color: #3178c6;
+}
+.node .icon {
+  color: #68a063;
+}
+.css .icon {
+  color: #264de4;
+}
+.html .icon {
+  color: #e34c26;
+}
+.mongo .icon {
+  color: #4db33d;
+}
+.git .icon {
+  color: #6e5494;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .skillsList {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .skillItem {
+    width: 100px;
+    height: 100px;
+    font-size: 0.9rem;
+  }
+
+  .icon {
+    font-size: 1.7rem;
+  }
 }
