@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 
 import movie from "../../Img/Project/movie.mp4";
 import phone from "../../Img/Project/phone.mov";
-import movieImg from "../../Img/Project/movieImg-1.png";
+import movieImg from "../../Img/Project/movieImg.png";
 import phoneImg from "../../Img/Project/phone.png";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { FaCode } from "react-icons/fa";
@@ -19,8 +19,8 @@ export default function Projects({ language }) {
     <section className={css.projectsContainer}>
       <h2 className={css.projectsTitle}>My Projects</h2>
       <div className={css.projectsWrapper}>
-        <div className={css.projectCard} data-aos="fade-right">
-          <div className={css.projectImgSubtitle}>
+        <div className={css.projectCard}>
+          <div className={css.projectImgSubtitle} data-aos="fade-right">
             <img className={css.movieImg} src={movieImg} alt="DeadPool" />
             <h3 className={css.projectTitle}>Movie-App</h3>
             <p className={css.projectDescription}>
@@ -60,8 +60,8 @@ export default function Projects({ language }) {
             </div>
           </div>
         </div>
-        <div className={css.projectCard} data-aos="fade-left">
-          <div className={css.projectImgSubtitle}>
+        <div className={css.projectCard}>
+          <div className={css.projectImgSubtitle} data-aos="fade-left">
             <img className={css.movieImg} src={phoneImg} alt="PhoneBook" />
             <h3 className={css.projectTitle}>Phone Book</h3>
             <p className={css.projectDescription}>
