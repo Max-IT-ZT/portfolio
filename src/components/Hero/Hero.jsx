@@ -34,8 +34,8 @@ export default function Hero({ language }) {
           options={{
             strings: [
               language === "ua"
-                ? "Привіт! Я Максим, Full-Stack Розробник :)"
-                : "Hi! I'm Maksym, Full-Stack Developer :)",
+                ? "Привіт! Я Максим, Full-Stack Розробник"
+                : "Hi! I'm Maksym, Full-Stack Developer",
               language === "ua"
                 ? "Тут я розповім про себе."
                 : "Here, I'll share about myself.",

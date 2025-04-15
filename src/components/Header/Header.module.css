@@ -95,14 +95,17 @@
     padding: 0 10px;
   }
   .logoImg {
-    height: 50px;
+    height: 40px;
   }
   .navWrapper {
     gap: 5px;
     font-size: 14px;
   }
   .menu {
-    gap: 15px;
+    gap: 10px;
+  }
+  .menuItem a {
+    font-size: 13px;
   }
   .langButton {
     gap: 4px;
