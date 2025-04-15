@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import movie from "../../Img/Project/movie.mov";
+import movie from "../../Img/Project/movie.mp4";
 import phone from "../../Img/Project/phone.mov";
 import movieImg from "../../Img/Project/movieImg-1.png";
 import phoneImg from "../../Img/Project/phone.png";
