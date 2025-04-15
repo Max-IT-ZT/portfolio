@@ -3,9 +3,13 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import movie from "../../Img/Project/movie.mp4";
-import phone from "../../Img/Project/phone.mov";
+import phone from "../../Img/Project/phone.mp4";
+import sweet from "../../Img/Project/sweet.mp4";
+import webstudio from "../../Img/Project/webstudio.mp4";
 import movieImg from "../../Img/Project/movieImg.png";
 import phoneImg from "../../Img/Project/phone.png";
+import sweetImg from "../../Img/Project/sweet.png";
+import webstudioImg from "../../Img/Project/webstudio.png";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { FaCode } from "react-icons/fa";
 import css from "./Projects.module.css";
@@ -16,8 +20,12 @@ export default function Projects({ language }) {
   }, []);
 
   return (
-    <section className={css.projectsContainer}>
-      <h2 className={css.projectsTitle}>My Projects</h2>
+    <section id="projects" className={css.projectsContainer}>
+      {language === "en" ? (
+        <h2 className={css.projectsTitle}>My Projects</h2>
+      ) : (
+        <h2 className={css.projectsTitle}>Мої проєкти</h2>
+      )}
       <div className={css.projectsWrapper}>
         <div className={css.projectCard}>
           <div className={css.projectImgSubtitle} data-aos="fade-right">
@@ -82,7 +90,7 @@ export default function Projects({ language }) {
             <div className={css.buttonWrapper}>
               <a
                 className={css.linkBtn}
-                href="https://your-demo-url.com"
+                href="https://goit-react-hw-08-ten-lake.vercel.app/contacts"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -91,7 +99,89 @@ export default function Projects({ language }) {
               </a>
               <a
                 className={css.linkBtn}
-                href="https://github.com/your-github-repo"
+                href="https://github.com/Max-IT-ZT/goit-react-hw-08"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaCode />
+                Code
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className={css.projectCard}>
+          <div className={css.projectImgSubtitle} data-aos="fade-left">
+            <img className={css.movieImg} src={sweetImg} alt="Sweet dream" />
+            <h3 className={css.projectTitle}>Sweet dream</h3>
+            <p className={css.projectDescription}>
+              {language === "en"
+                ? "A Delightful Journey into the World of Chocolate Discover a responsive and visually captivating website dedicated to the rich world of chocolate. From the origins of cacao and the fascinating history of chocolate, to the meticulous manufacturing process and diverse types — this site offers an immersive and educational experience. Featuring an elegant design, interactive elements, and a smooth burger menu for easy navigation across all devices, it's a treat for both the eyes and the taste buds of every chocolate lover."
+                : "Солодка подорож у світ шоколаду Занурся у захопливий світ шоколаду за допомогою стильного, адаптивного сайту. Історія шоколаду, походження какао-бобів, процес виготовлення та різноманіття видів — усе це представлено у привабливій та інтерактивній формі. Завдяки вишуканому дизайну, інтерактивним елементам і зручному бургер-меню для навігації з будь-якого пристрою, сайт стане справжнім візуальним задоволенням для кожного поціновувача солодощів."}
+            </p>
+          </div>
+          <div className={css.descriptionVideoWrapper} data-aos="fade-right">
+            <video
+              src={sweet}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className={css.videoPreview}
+            />
+            <div className={css.buttonWrapper}>
+              <a
+                className={css.linkBtn}
+                href="https://max-it-zt.github.io/my-first-team-project/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <HiOutlineExternalLink />
+                Demo
+              </a>
+              <a
+                className={css.linkBtn}
+                href="https://github.com/Max-IT-ZT/my-first-team-project"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaCode />
+                Code
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className={css.projectCard}>
+          <div className={css.projectImgSubtitle} data-aos="fade-left">
+            <img className={css.movieImg} src={webstudioImg} alt="WebStudio" />
+            <h3 className={css.projectTitle}>WebStudio</h3>
+            <p className={css.projectDescription}>
+              {language === "en"
+                ? "A modern and responsive website for the WebStudio company, crafted as an individual project. It features animation effects, interactive modal windows, and a clean, professional layout. The design focuses on usability and smooth user experience across all devices."
+                : "Сучасний адаптивний сайт для компанії WebStudio, створений як індивідуальний проєкт. Включає ефекти анімації, інтерактивні модальні вікна та професійний, лаконічний дизайн. Увага зосереджена на зручності користування та плавній взаємодії на будь-якому пристрої."}
+            </p>
+          </div>
+          <div className={css.descriptionVideoWrapper} data-aos="fade-right">
+            <video
+              src={webstudio}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className={css.videoPreview}
+            />
+            <div className={css.buttonWrapper}>
+              <a
+                className={css.linkBtn}
+                href="https://max-it-zt.github.io/goit-markup-hw-07/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <HiOutlineExternalLink />
+                Demo
+              </a>
+              <a
+                className={css.linkBtn}
+                href="https://github.com/Max-IT-ZT/goit-markup-hw-07"
                 target="_blank"
                 rel="noopener noreferrer"
               >

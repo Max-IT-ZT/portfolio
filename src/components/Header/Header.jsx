@@ -1,5 +1,5 @@
 import css from "./Header.module.css";
-import logo from "../../Img/Logo/Logo4.png";
+import logo from "../../Img/Logo/MaxDev.png";
 import { FaGlobe } from "react-icons/fa";
 
 export default function Header({ language, setLanguage }) {
@@ -25,7 +25,7 @@ export default function Header({ language, setLanguage }) {
   };
 
   return (
-    <div className={css.mainContainer}>
+    <section id="header" className={css.mainContainer}>
       <a className={css.logoLink} href="#">
         <img className={css.logoImg} src={logo} alt="Logo" />
       </a>
@@ -50,6 +50,6 @@ export default function Header({ language, setLanguage }) {
           </button>
         </div>
       </nav>
-    </div>
+    </section>
   );
 }

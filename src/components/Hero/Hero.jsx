@@ -28,7 +28,7 @@ export default function Hero({ language }) {
     return () => clearInterval(interval);
   }, [code]);
   return (
-    <div className={css.container}>
+    <section id="hero" className={css.container}>
       <h1 className={css.heroTitle}>
         <Typewriter
           options={{
@@ -73,6 +73,6 @@ export default function Hero({ language }) {
           </>
         )}
       </h2>
-    </div>
+    </section>
   );
 }
