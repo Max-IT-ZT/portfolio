@@ -120,6 +120,7 @@
   }
   .imgAbout {
     max-width: 300px;
+    height: fit-content;
   }
   .skillItem {
     min-width: 60px;
