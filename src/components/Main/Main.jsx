@@ -1,5 +1,5 @@
 import css from "./Main.module.css";
-import img from "../../Img/About/About-2.png";
+
 import {
   RiJavascriptFill,
   RiReactjsLine,
@@ -38,7 +38,12 @@ export default function Main({ language }) {
             </p>
           )}
         </div>
-        <img className={css.imgAbout} src={img} alt="" />
+        <img
+          className={css.imgAbout}
+          src="https://res.cloudinary.com/dvxk9pygu/image/upload/v1745230384/About-2_wyuqyo.png"
+          alt=""
+          loading="lazy"
+        />
         <div className={css.textSkillsWrapper}>
           {language === "en" ? (
             <p className={css.textSkills}>

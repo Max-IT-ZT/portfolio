@@ -2,14 +2,14 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import movie from "../../Img/Project/movie.mp4";
-import phone from "../../Img/Project/phone.mp4";
-import sweet from "../../Img/Project/sweet.mp4";
-import webstudio from "../../Img/Project/webstudio.mp4";
-import movieImg from "../../Img/Project/movieImg.png";
-import phoneImg from "../../Img/Project/phone.png";
-import sweetImg from "../../Img/Project/sweet.png";
-import webstudioImg from "../../Img/Project/webstudio.png";
+// import movie from "../../Img/Project/movie.mp4";
+// import phone from "../../Img/Project/phone.mp4";
+// import sweet from "../../Img/Project/sweet.mp4";
+// import webstudio from "../../Img/Project/webstudio.mp4";
+// import movieImg from "../../Img/Project/movieImg.png";
+// import phoneImg from "../../Img/Project/phone.png";
+// import sweetImg from "../../Img/Project/sweet.png";
+// import webstudioImg from "../../Img/Project/webstudio.png";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { FaCode } from "react-icons/fa";
 import css from "./Projects.module.css";
@@ -29,7 +29,12 @@ export default function Projects({ language }) {
       <div className={css.projectsWrapper}>
         <div className={css.projectCard}>
           <div className={css.projectImgSubtitle} data-aos="fade-right">
-            <img className={css.movieImg} src={movieImg} alt="DeadPool" />
+            <img
+              className={css.movieImg}
+              src="https://res.cloudinary.com/dvxk9pygu/image/upload/v1745230530/movieImg_erudyd.png"
+              alt="DeadPool"
+              loading="lazy"
+            />
             <h3 className={css.projectTitle}>Movie-App</h3>
             <p className={css.projectDescription}>
               {language === "en"
@@ -39,10 +44,11 @@ export default function Projects({ language }) {
           </div>
           <div className={css.descriptionVideoWrapper} data-aos="fade-left">
             <video
-              src={movie}
+              src="https://res.cloudinary.com/dvxk9pygu/video/upload/v1745230531/movie_b9ycgb.mp4"
               autoPlay
               loop
               muted
+              loading="lazy"
               playsInline
               className={css.videoPreview}
             />
@@ -70,7 +76,12 @@ export default function Projects({ language }) {
         </div>
         <div className={css.projectCard}>
           <div className={css.projectImgSubtitle} data-aos="fade-left">
-            <img className={css.movieImg} src={phoneImg} alt="PhoneBook" />
+            <img
+              className={css.movieImg}
+              src="https://res.cloudinary.com/dvxk9pygu/image/upload/v1745230531/phone_pbjrgs.png"
+              alt="PhoneBook"
+              loading="lazy"
+            />
             <h3 className={css.projectTitle}>Phone Book</h3>
             <p className={css.projectDescription}>
               {language === "en"
@@ -80,8 +91,9 @@ export default function Projects({ language }) {
           </div>
           <div className={css.descriptionVideoWrapper} data-aos="fade-right">
             <video
-              src={phone}
+              src="https://res.cloudinary.com/dvxk9pygu/video/upload/v1745230531/phone_sbuwr0.mp4"
               autoPlay
+              loading="lazy"
               loop
               muted
               playsInline
@@ -111,7 +123,12 @@ export default function Projects({ language }) {
         </div>
         <div className={css.projectCard}>
           <div className={css.projectImgSubtitle} data-aos="fade-left">
-            <img className={css.movieImg} src={sweetImg} alt="Sweet dream" />
+            <img
+              className={css.movieImg}
+              src="https://res.cloudinary.com/dvxk9pygu/image/upload/v1745230531/sweet_ocd1jt.png"
+              alt="Sweet dream"
+              loading="lazy"
+            />
             <h3 className={css.projectTitle}>Sweet dream</h3>
             <p className={css.projectDescription}>
               {language === "en"
@@ -121,9 +138,10 @@ export default function Projects({ language }) {
           </div>
           <div className={css.descriptionVideoWrapper} data-aos="fade-right">
             <video
-              src={sweet}
+              src="https://res.cloudinary.com/dvxk9pygu/video/upload/v1745230532/sweet_b0zhnd.mp4"
               autoPlay
               loop
+              loading="lazy"
               muted
               playsInline
               className={css.videoPreview}
@@ -152,7 +170,12 @@ export default function Projects({ language }) {
         </div>
         <div className={css.projectCard}>
           <div className={css.projectImgSubtitle} data-aos="fade-left">
-            <img className={css.movieImg} src={webstudioImg} alt="WebStudio" />
+            <img
+              className={css.movieImg}
+              src="https://res.cloudinary.com/dvxk9pygu/image/upload/v1745230532/webstudio_ulkfku.png"
+              alt="WebStudio"
+              loading="lazy"
+            />
             <h3 className={css.projectTitle}>WebStudio</h3>
             <p className={css.projectDescription}>
               {language === "en"
@@ -162,11 +185,12 @@ export default function Projects({ language }) {
           </div>
           <div className={css.descriptionVideoWrapper} data-aos="fade-right">
             <video
-              src={webstudio}
+              src="https://res.cloudinary.com/dvxk9pygu/video/upload/v1745230532/webstudio_uz5a2q.mp4"
               autoPlay
               loop
               muted
               playsInline
+              loading="lazy"
               className={css.videoPreview}
             />
             <div className={css.buttonWrapper}>

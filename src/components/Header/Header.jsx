@@ -1,5 +1,4 @@
 import css from "./Header.module.css";
-import logo from "../../Img/Logo/MaxDev.png";
 import { FaGlobe } from "react-icons/fa";
 
 export default function Header({ language, setLanguage }) {
@@ -27,7 +26,11 @@ export default function Header({ language, setLanguage }) {
   return (
     <section id="header" className={css.mainContainer}>
       <a className={css.logoLink} href="#">
-        <img className={css.logoImg} src={logo} alt="Logo" />
+        <img
+          className={css.logoImg}
+          src="https://res.cloudinary.com/dvxk9pygu/image/upload/v1745230572/MaxDev_k6zi2x.png"
+          alt="Logo"
+        />
       </a>
 
       <nav className={css.navWrapper}>

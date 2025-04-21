@@ -1,5 +1,5 @@
 import css from "./Footer.module.css";
-import logo from "../../Img/Logo/MaxDev.png";
+
 import { FaFacebookF, FaInstagram, FaTelegramPlane } from "react-icons/fa";
 
 export default function Footer({ language }) {
@@ -23,7 +23,12 @@ export default function Footer({ language }) {
     <footer className={css.footerContainer}>
       <div className={css.content}>
         <a className={css.logoLink} href="#">
-          <img className={css.logoImg} src={logo} alt="Logo" />
+          <img
+            className={css.logoImg}
+            src="https://res.cloudinary.com/dvxk9pygu/image/upload/v1745230572/MaxDev_k6zi2x.png"
+            alt="Logo"
+            loading="lazy"
+          />
         </a>
 
         <nav className={css.nav}>
