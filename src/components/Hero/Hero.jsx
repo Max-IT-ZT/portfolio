@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import bc from "../../Img/Background/bc.webp";
 export default function Hero({ language }) {
   const [displayed, setDisplayed] = useState("");
+  const [imgLoaded, setImgLoaded] = useState(false);
 
   const code =
     `<span class="fn">async function</span> <span class="name">fetchUserData</span>(<span class="param">id</span>) {\n` +
@@ -28,6 +29,7 @@ export default function Hero({ language }) {
   }, [code]);
   return (
     <section id="hero" className={css.container}>
+      <link rel="preload" as="image" href={bc} />
       <h1 className={css.heroTitle}>
         <Typewriter
           options={{
@@ -60,7 +62,18 @@ export default function Hero({ language }) {
         <pre className={css.codeBlock}>
           <code dangerouslySetInnerHTML={{ __html: displayed }} />
         </pre>
-        <img className={css.heroImg} src={bc} alt="Hero img" />
+        <img
+          className={css.heroImg}
+          src={bc}
+          alt="Hero img"
+          loading="eager"
+          decoding="async"
+          style={{
+            filter: imgLoaded ? "none" : "blur(10px)",
+            transition: "filter 0.5s ease-out",
+          }}
+          onLoad={() => setImgLoaded(true)}
+        />
       </div>
     </section>
   );

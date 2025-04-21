@@ -46,6 +46,7 @@
   object-fit: contain;
   height: auto;
   border-radius: 12px;
+  transition: filter 0.5s ease-out;
 }
 
 .typewriter {
