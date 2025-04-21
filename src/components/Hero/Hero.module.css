@@ -1,25 +1,60 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  padding: 2rem;
+  justify-content: space-between;
+  padding: 20px;
   margin: 0 auto;
   position: relative;
-  height: 90vh;
+  min-height: 100vh;
   color: #fff;
   box-sizing: border-box;
-  background-image: url("https://res.cloudinary.com/dvxk9pygu/image/upload/v1745230558/bc_hjooib.png");
-
-  background-size: contain;
-  background-position: right;
-  background-repeat: no-repeat;
+  overflow: hidden;
 }
+
+.codeWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.codeBlock {
+  min-width: 300px;
+  max-width: 600px;
+  min-height: 200px;
+  flex: 1 1 50%;
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  white-space: pre-wrap;
+  line-height: 1.6;
+  padding: 1rem;
+  color: white;
+  border-radius: 12px;
+  overflow-x: auto;
+}
+
+.heroImg {
+  max-width: 500px;
+  flex: 1 1 40%;
+  object-fit: contain;
+  height: auto;
+  border-radius: 12px;
+}
+
 .typewriter {
   font-size: 45px;
   font-weight: 700;
   letter-spacing: 3px;
   color: #fff;
   text-align: center;
+  margin: 0 auto;
 }
 .cursor {
   display: inline-block;
@@ -41,86 +76,70 @@
     transform: scaleY(0);
   }
 }
-.heroSubtitle {
-  font-size: 20px;
-  font-weight: 700;
-  color: #ffffff;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  margin: 0 auto;
-}
-.codeWrapper {
-  font-family: "Fira Code", monospace;
-  font-size: 16px;
-  white-space: pre-wrap;
-  line-height: 1.5;
-  padding: 1rem;
-  color: white;
-  width: 540px;
-  height: 250px;
-}
+
 @media (max-width: 1024px) {
   .container {
-    padding: 1.5rem;
+    padding: 2rem;
+  }
+  .heroTitle {
+    min-height: 82px;
   }
   .typewriter {
-    font-size: 35px;
+    font-size: 36px;
+    min-height: 72px;
     letter-spacing: 2px;
   }
-  .codeWrapper {
-    width: 80%;
-    height: 200px;
+
+  .codeBlock {
     font-size: 14px;
+    min-height: 200px;
   }
-  .heroSubtitle {
-    font-size: 18px;
+
+  .heroImg {
+    max-width: 400px;
   }
 }
 
 @media (max-width: 768px) {
-  .container {
-    padding: 1rem;
-    background-size: cover;
-    background-position: left;
+  .codeWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .codeBlock {
+    font-size: 13px;
+    max-width: 100%;
+    padding: 0.75rem;
+  }
+  .heroTitle {
+    min-height: 66px;
   }
   .typewriter {
     font-size: 28px;
+    min-height: 56px;
     letter-spacing: 1px;
   }
-  .codeWrapper {
-    width: 90%;
-    height: 180px;
-    font-size: 12px;
-    padding: 0.5rem;
-  }
-  .heroSubtitle {
-    font-size: 16px;
-  }
-  .heroImg {
-    opacity: 0.6;
-  }
 }
+
 @media (max-width: 426px) {
   .container {
-    padding: 0.3rem;
+    padding: 1rem;
+  }
+  .heroTitle {
+    min-height: 50px;
   }
   .typewriter {
-    font-size: 18px;
-    letter-spacing: 0.3px;
+    font-size: 20px;
+
+    letter-spacing: 0.5px;
   }
-  .codeWrapper {
-    width: 100%;
-    height: 150px;
-    font-size: 8px;
-    padding: 0.3rem;
-  }
-  .heroSubtitle {
-    font-size: 14px;
-    gap: 3px;
+
+  .codeBlock {
+    font-size: 11px;
+    padding: 0.5rem;
   }
 }
+
 :global(.fn) {
   color: #569cd6;
 }

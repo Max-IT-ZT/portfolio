@@ -1,8 +1,7 @@
-// import bc from "../../Img/Background/bc-3.png";
-import { GiFlamingArrow } from "react-icons/gi";
 import css from "./Hero.module.css";
 import Typewriter from "typewriter-effect";
 import { useEffect, useState } from "react";
+import bc from "../../Img/Background/bc.webp";
 export default function Hero({ language }) {
   const [displayed, setDisplayed] = useState("");
 
@@ -58,21 +57,11 @@ export default function Hero({ language }) {
         />
       </h1>
       <div className={css.codeWrapper}>
-        <pre>
+        <pre className={css.codeBlock}>
           <code dangerouslySetInnerHTML={{ __html: displayed }} />
         </pre>
+        <img className={css.heroImg} src={bc} alt="Hero img" />
       </div>
-      <h2 className={css.heroSubtitle}>
-        {language === "ua" ? (
-          <>
-            <span>Просто гортай до низу </span> <GiFlamingArrow />
-          </>
-        ) : (
-          <>
-            <span> Just scroll down </span> <GiFlamingArrow />
-          </>
-        )}
-      </h2>
     </section>
   );
 }

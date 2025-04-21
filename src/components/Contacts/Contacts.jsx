@@ -6,18 +6,24 @@ import {
   FaTelegram,
 } from "react-icons/fa";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { useInView } from "react-intersection-observer";
+import "leaflet/dist/leaflet.css";
 import css from "./Contacts.module.css";
 
 export default function Contacts({ language }) {
-  const position = [50.266186, 28.629837]; // Update with your actual coordinates
+  const position = [50.266186, 28.629837];
+
+  const { ref: mapRef, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
 
   return (
     <section id="contacts" className={css.contactsContainer}>
-      {language === "en" ? (
-        <h2 className={css.contactsTitle}>Contacts</h2>
-      ) : (
-        <h2 className={css.contactsTitle}>Контакти</h2>
-      )}
+      <h2 className={css.contactsTitle}>
+        {language === "en" ? "Contacts" : "Контакти"}
+      </h2>
+
       <ul className={css.contactsList}>
         <li className={css.contactsItem}>
           <a className={css.contactsLink} href="tel:+380501894397">
@@ -61,26 +67,34 @@ export default function Contacts({ language }) {
         </li>
       </ul>
 
-      <div className={css.mapWrapper}>
-        {language === "en" ? (
-          <h2 className={css.mapTitle}>My Location</h2>
+      <div className={css.mapWrapper} ref={mapRef}>
+        <h2 className={css.mapTitle}>
+          {language === "en" ? "My Location" : "Моє розташування"}
+        </h2>
+
+        {inView ? (
+          <MapContainer
+            center={position}
+            zoom={13}
+            scrollWheelZoom={false}
+            className={css.mapContainer}
+          >
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={position}>
+              <Popup>I'm here! Click to open in full map view.</Popup>
+            </Marker>
+          </MapContainer>
         ) : (
-          <h2 className={css.mapTitle}>Моє розташування</h2>
+          <div className={css.mapPlaceholder}>
+            <p>
+              {language === "en" ? "Loading map..." : "Завантаження карти..."}
+            </p>
+          </div>
         )}
-        <MapContainer
-          center={position}
-          zoom={13}
-          scrollWheelZoom={false}
-          className={css.mapContainer}
-        >
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Marker position={position}>
-            <Popup>I'm here! Click to open in full map view.</Popup>
-          </Marker>
-        </MapContainer>
+
         <a
           href={`https://www.google.com/maps?q=${position[0]},${position[1]}`}
           target="_blank"

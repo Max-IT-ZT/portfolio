@@ -6,10 +6,10 @@ import "aos/dist/aos.css";
 // import phone from "../../Img/Project/phone.mp4";
 // import sweet from "../../Img/Project/sweet.mp4";
 // import webstudio from "../../Img/Project/webstudio.mp4";
-// import movieImg from "../../Img/Project/movieImg.png";
-// import phoneImg from "../../Img/Project/phone.png";
-// import sweetImg from "../../Img/Project/sweet.png";
-// import webstudioImg from "../../Img/Project/webstudio.png";
+import movieImg from "../../Img/Project/movieImg.webp";
+import phoneImg from "../../Img/Project/phone.webp";
+import sweetImg from "../../Img/Project/sweet.webp";
+import webstudioImg from "../../Img/Project/webstudio.webp";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { FaCode } from "react-icons/fa";
 import css from "./Projects.module.css";
@@ -31,7 +31,7 @@ export default function Projects({ language }) {
           <div className={css.projectImgSubtitle} data-aos="fade-right">
             <img
               className={css.movieImg}
-              src="https://res.cloudinary.com/dvxk9pygu/image/upload/v1745230530/movieImg_erudyd.png"
+              src={movieImg}
               alt="DeadPool"
               loading="lazy"
             />
@@ -44,12 +44,14 @@ export default function Projects({ language }) {
           </div>
           <div className={css.descriptionVideoWrapper} data-aos="fade-left">
             <video
-              src="https://res.cloudinary.com/dvxk9pygu/video/upload/v1745230531/movie_b9ycgb.mp4"
+              src="https://res.cloudinary.com/dvxk9pygu/video/upload/f_auto,q_auto,vc_auto/v1745230531/movie_b9ycgb.mp4"
               autoPlay
               loop
               muted
               loading="lazy"
               playsInline
+              preload="none"
+              poster="https://res.cloudinary.com/dvxk9pygu/video/upload/so_0/movie_b9ycgb.jpg"
               className={css.videoPreview}
             />
             <div className={css.buttonWrapper}>
@@ -78,7 +80,7 @@ export default function Projects({ language }) {
           <div className={css.projectImgSubtitle} data-aos="fade-left">
             <img
               className={css.movieImg}
-              src="https://res.cloudinary.com/dvxk9pygu/image/upload/v1745230531/phone_pbjrgs.png"
+              src={phoneImg}
               alt="PhoneBook"
               loading="lazy"
             />
@@ -91,12 +93,14 @@ export default function Projects({ language }) {
           </div>
           <div className={css.descriptionVideoWrapper} data-aos="fade-right">
             <video
-              src="https://res.cloudinary.com/dvxk9pygu/video/upload/v1745230531/phone_sbuwr0.mp4"
+              src="https://res.cloudinary.com/dvxk9pygu/video/upload/f_auto,q_auto,vc_auto/v1745230531/phone_sbuwr0.mp4"
               autoPlay
-              loading="lazy"
               loop
               muted
               playsInline
+              loading="lazy"
+              preload="none"
+              poster="https://res.cloudinary.com/dvxk9pygu/video/upload/so_0/phone_sbuwr0.jpg"
               className={css.videoPreview}
             />
             <div className={css.buttonWrapper}>
@@ -125,7 +129,7 @@ export default function Projects({ language }) {
           <div className={css.projectImgSubtitle} data-aos="fade-left">
             <img
               className={css.movieImg}
-              src="https://res.cloudinary.com/dvxk9pygu/image/upload/v1745230531/sweet_ocd1jt.png"
+              src={sweetImg}
               alt="Sweet dream"
               loading="lazy"
             />
@@ -138,12 +142,14 @@ export default function Projects({ language }) {
           </div>
           <div className={css.descriptionVideoWrapper} data-aos="fade-right">
             <video
-              src="https://res.cloudinary.com/dvxk9pygu/video/upload/v1745230532/sweet_b0zhnd.mp4"
+              src="https://res.cloudinary.com/dvxk9pygu/video/upload/f_auto,q_auto,vc_auto/v1745230532/sweet_b0zhnd.mp4"
               autoPlay
               loop
-              loading="lazy"
               muted
+              loading="lazy"
               playsInline
+              preload="none"
+              poster="https://res.cloudinary.com/dvxk9pygu/video/upload/so_0/sweet_b0zhnd.jpg"
               className={css.videoPreview}
             />
             <div className={css.buttonWrapper}>
@@ -172,7 +178,7 @@ export default function Projects({ language }) {
           <div className={css.projectImgSubtitle} data-aos="fade-left">
             <img
               className={css.movieImg}
-              src="https://res.cloudinary.com/dvxk9pygu/image/upload/v1745230532/webstudio_ulkfku.png"
+              src={webstudioImg}
               alt="WebStudio"
               loading="lazy"
             />
@@ -185,14 +191,17 @@ export default function Projects({ language }) {
           </div>
           <div className={css.descriptionVideoWrapper} data-aos="fade-right">
             <video
-              src="https://res.cloudinary.com/dvxk9pygu/video/upload/v1745230532/webstudio_uz5a2q.mp4"
+              src="https://res.cloudinary.com/dvxk9pygu/video/upload/f_auto,q_auto,vc_auto/v1745230532/webstudio_uz5a2q.mp4"
               autoPlay
               loop
               muted
-              playsInline
               loading="lazy"
+              playsInline
+              preload="none"
               className={css.videoPreview}
+              poster="https://res.cloudinary.com/dvxk9pygu/video/upload/so_0/webstudio_uz5a2q.jpg"
             />
+
             <div className={css.buttonWrapper}>
               <a
                 className={css.linkBtn}
