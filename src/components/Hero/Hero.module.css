@@ -1,20 +1,20 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 20px;
   margin: 0 auto;
-  position: relative;
   min-height: 100vh;
   color: #fff;
   box-sizing: border-box;
   overflow: hidden;
+  background-image: url("../../Img/Background/bc.webp");
+  background-size: contain;
+  background-position: right bottom;
+  background-repeat: no-repeat;
 }
-
 .codeWrapper {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: start;
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 40px;
@@ -24,7 +24,6 @@
   margin-left: auto;
   margin-right: auto;
 }
-
 .codeBlock {
   min-width: 300px;
   max-width: 600px;
@@ -38,14 +37,6 @@
   color: white;
   border-radius: 12px;
   overflow-x: auto;
-}
-
-.heroImg {
-  max-width: 500px;
-  object-fit: contain;
-  height: auto;
-  border-radius: 12px;
-  transition: filter 0.5s ease-out;
 }
 
 .typewriter {
@@ -94,16 +85,11 @@
     font-size: 14px;
     min-height: 200px;
   }
-
-  .heroImg {
-    max-width: 400px;
-  }
 }
 
 @media (max-width: 768px) {
   .codeWrapper {
-    flex-direction: column;
-    align-items: center;
+    align-items: start;
   }
 
   .codeBlock {
