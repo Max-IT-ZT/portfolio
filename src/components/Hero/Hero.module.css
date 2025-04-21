@@ -42,7 +42,6 @@
 
 .heroImg {
   max-width: 500px;
-  flex: 1 1 40%;
   object-fit: contain;
   height: auto;
   border-radius: 12px;
