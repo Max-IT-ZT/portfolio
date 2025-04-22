@@ -40,7 +40,7 @@ export default function Main({ language }) {
         </div>
         <img
           className={css.imgAbout}
-          src="https://res.cloudinary.com/dvxk9pygu/image/upload/v1745230384/About-2_wyuqyo.png"
+          src="https://res.cloudinary.com/dvxk9pygu/image/upload/v1745267965/About-2_q4hcgl.webp"
           alt=""
           loading="lazy"
         />

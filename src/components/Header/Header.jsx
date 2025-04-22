@@ -28,7 +28,7 @@ export default function Header({ language, setLanguage }) {
       <a className={css.logoLink} href="#">
         <img
           className={css.logoImg}
-          src="https://res.cloudinary.com/dvxk9pygu/image/upload/v1745230572/MaxDev_k6zi2x.png"
+          src="https://res.cloudinary.com/dvxk9pygu/image/upload/v1745267489/MaxDev_p94vz9.webp"
           alt="Logo"
         />
       </a>

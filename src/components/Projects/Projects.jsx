@@ -51,7 +51,6 @@ export default function Projects({ language }) {
               loading="lazy"
               playsInline
               preload="none"
-              poster="https://res.cloudinary.com/dvxk9pygu/video/upload/so_0/movie_b9ycgb.jpg"
               className={css.videoPreview}
             />
             <div className={css.buttonWrapper}>
@@ -100,7 +99,6 @@ export default function Projects({ language }) {
               playsInline
               loading="lazy"
               preload="none"
-              poster="https://res.cloudinary.com/dvxk9pygu/video/upload/so_0/phone_sbuwr0.jpg"
               className={css.videoPreview}
             />
             <div className={css.buttonWrapper}>
@@ -149,7 +147,6 @@ export default function Projects({ language }) {
               loading="lazy"
               playsInline
               preload="none"
-              poster="https://res.cloudinary.com/dvxk9pygu/video/upload/so_0/sweet_b0zhnd.jpg"
               className={css.videoPreview}
             />
             <div className={css.buttonWrapper}>
@@ -199,7 +196,6 @@ export default function Projects({ language }) {
               playsInline
               preload="none"
               className={css.videoPreview}
-              poster="https://res.cloudinary.com/dvxk9pygu/video/upload/so_0/webstudio_uz5a2q.jpg"
             />
 
             <div className={css.buttonWrapper}>
